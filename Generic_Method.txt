@@ -1,0 +1,47 @@
+using System;
+
+
+namespace Genric_Method
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            store<string> name = new store<string>();
+            name.Setdata(10, "Manoj kumar Yadav");
+            name.Setdata(20, "Sanjay Singh");
+            name.Setdata(15, "surya");
+            name.Setdata(100, "aditya yadav");
+
+
+            Console.WriteLine(name.GetData(20));
+
+            store<int> empIds = new store<int>();
+            empIds.Setdata(0, 50);
+            empIds.Setdata(1, 65);
+            empIds.Setdata(2, 89);
+            empIds.Setdata(1002, 9);
+
+            Console.WriteLine(empIds.GetData(1));
+        }
+    }
+    class store<T>
+    {
+        public T[] dt = new T[100];
+        public void Setdata(int index, T item)
+        {
+            if (index >= 0 && index < 100)
+                dt[index] = item;
+        }
+        public T GetData(int index)
+        {
+            if (index >= 0 && index < 100)
+                return dt[index];
+            else
+                return default(T);
+            //Console.WriteLine("index value is not found");
+
+
+        }
+    }
+}
