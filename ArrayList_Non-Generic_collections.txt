@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+
+namespace ArrayList_non_generic_collections
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList arrl = new ArrayList();
+            arrl.Add(123);
+            arrl.Add("Manoj Kumar Yadav");
+            arrl.Add(".Net Developer");
+            arrl.Add(4000);
+
+            Console.WriteLine("First array List :");
+            for(int i=0;i<arrl.Count;i++)
+            {
+                Console.WriteLine(arrl[i]);
+            }
+
+            var arrl2 = new ArrayList()
+            {
+                456,"Sanjay Singh","Youtuber",74000,"Mirzapur",null
+            };
+            Console.WriteLine("Second Array List is :");
+            for(int i=0;i<arrl2.Count;i++)
+            {
+                Console.WriteLine(arrl2[i]);
+            }
+        }
+    }
+}
